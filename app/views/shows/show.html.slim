@@ -1,0 +1,33 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @show.title
+p
+  strong Slug:
+  = @show.slug
+p
+  strong Description:
+  = @show.description
+p
+  strong Datetime:
+  = @show.datetime
+p
+  strong Venue name:
+  = @show.venue_name
+p
+  strong Venue url:
+  = @show.venue_url
+p
+  strong Venue address:
+  = @show.venue_address
+p
+  strong Cover:
+  = @show.cover
+p
+  strong Cover note:
+  = @show.cover_note
+
+= link_to 'Edit', edit_show_path(@show)
+'  |
+= link_to 'Back', shows_path

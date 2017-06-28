@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title MY APPLICATION
+    == csrf_meta_tags
+
+    link rel="stylesheet" href="/css/app.css"
+    script src="/js/app.js"
+
+  body
+    .container
+      == yield
