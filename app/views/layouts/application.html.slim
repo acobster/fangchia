@@ -1,12 +1,52 @@
 doctype html
 html
   head
+    meta charset="utf-8"
     title MY APPLICATION
     == csrf_meta_tags
 
     link rel="stylesheet" href="/css/style.css"
     script src="/js/app.min.js"
 
-  body
-    .container
+    // == yield :head
+
+  body itemscope=true itemtype="http://schema.org/MusicGroup"
+    header
+      .site-heading-wrapper
+        a href="/" title="FangChia.com"
+          h1.site-heading itemprop="name" Fang Chia
+
+      input#nav-trigger.nav-trigger type="checkbox"
+      label for="nav-trigger"
+        span
+        span
+        span
+
+      nav
+        ul
+          li
+            a.nav-link href="/" Home
+          li
+            a.nav-link href="/music" Music
+          li
+            a.nav-link href="/shows" Shows
+          li
+            a.nav-link href="/photos" Photos
+          li
+            a.nav-link href="/about" About
+
+
+    main#main
       == yield
+
+
+    aside#player-wrapper
+      div#open-player-btn-wrapper.open-player-btn-wrapper
+        div#open-player-btn.open-player-btn
+
+      div.player
+        iframe style="border: 0; width: 400px; height: 472px;" src="http://bandcamp.com/EmbeddedPlayer/album=698425854/size=large/bgcol=333333/linkcol=4ec5ec/artwork=small/transparent=true/" seamless=true
+
+    footer.site-footer
+
+

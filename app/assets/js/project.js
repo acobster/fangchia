@@ -24,9 +24,6 @@ window.addEventListener( 'load', function() {
   nav.bind(document);
   nav.observe(document.getElementById('main'));
 
-  // load the route on load
-  nav.go(location.pathname);
-
 
   // close mobile nav on click
   Array.prototype.slice.call(document.getElementsByClassName('nav-link'))
@@ -73,6 +70,7 @@ window.addEventListener( 'load', function() {
   });
 
   // bounce the player button on first visit
+  // TODO bouncing looks dumb, make it shimmer instead
   if (!window.localStorage.repeatVisit) {
     var btnWrapper = document.getElementById('open-player-btn-wrapper');
 
