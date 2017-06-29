@@ -1,0 +1,34 @@
+input {
+  color: @black;
+  background-color: lighten(@grey, 50%);
+  padding: 2px;
+}
+
+input, label {
+  .sans-serif;
+}
+
+label {
+  color: @secondary-highlight-color;
+}
+
+
+.new_user {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-bottom: 2em;
+
+  .field, .actions {
+    flex-grow: 2;
+    margin: 0.5em auto;
+    width: 50%;
+  }
+  .actions { width: 100%; }
+
+  @media @mobile {
+    display: block;
+
+    .field, .actions { margin: 1em 0 }
+  }
+}
