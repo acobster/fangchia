@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
   root to: 'pages#index'
-mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  resources :pages
-  resources :shows
+
+  get '/shows', to: 'shows#index'
+  get '/shows/:slug', to: 'shows#show'
+
+  get '/:slug', to: 'pages#show'
+
   devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
