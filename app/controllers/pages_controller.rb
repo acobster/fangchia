@@ -1,8 +1,12 @@
 class PagesController < ApplicationController
 
+  def index
+    @page = Page.home
+  end
+
   # GET /pages/1
   def show
-    @show = Page.find_by_slug(params[:slug])
+    @page = Page.find_by_slug(params[:slug])
   end
 
 end

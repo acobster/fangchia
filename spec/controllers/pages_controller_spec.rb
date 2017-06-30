@@ -25,17 +25,17 @@ require 'rails_helper'
 
 RSpec.describe PagesController, type: :controller do
 
-  # This should return the minimal set of attributes required to create a valid
-  # Page. As you add validations to Page, be sure to
-  # adjust the attributes here as well.
-  let(:valid_attributes) {
-    {slug: 'my-page',
-     title: 'My Page'}
-  }
+  describe 'GET #index' do
+    it 'returns a success response' do
+      Page.create!({slug: 'home', title: 'The Home Page'})
+      get :index, params: {slug: 'home'}
+      expect(response).to be_success
+    end
+  end
 
   describe "GET #show" do
     it "returns a success response" do
-      page = Page.create! valid_attributes
+      page = Page.create!({slug: 'my-page', title: 'My Page'})
       get :show, params: {slug: page.slug}
       expect(response).to be_success
     end
