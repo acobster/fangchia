@@ -1,25 +1,6 @@
-h1 Listing pages
+- content_for :title do
+  = @page.title
 
-table
-  thead
-    tr
-      th Title
-      th Slug
-      th Content
-      th
-      th
-      th
 
-  tbody
-    - @pages.each do |page|
-      tr
-        td = page.title
-        td = page.slug
-        td = page.content
-        td = link_to 'Show', page
-        td = link_to 'Edit', edit_page_path(page)
-        td = link_to 'Destroy', page, data: { confirm: 'Are you sure?' }, method: :delete
+= @page.content
 
-br
-
-= link_to 'New Page', new_page_path
