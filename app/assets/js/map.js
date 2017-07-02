@@ -3,7 +3,10 @@
 window.addEventListener( 'load', function() {
 
   var mapElement = document.getElementById('map');
-  var venue = new google.maps.LatLng({lat: 47.6023262, lng: -122.1374963}); // TODO don't hard-code
+  var venue = new google.maps.LatLng({
+    lat: parseFloat(mapElement.dataset.lat),
+    lng: parseFloat(mapElement.dataset.lng)
+  });
   var center = { lng: venue.lng(), lat: venue.lat() + LATITUDE_ADJUSTMENT };
 
   // Create the map

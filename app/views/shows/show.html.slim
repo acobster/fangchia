@@ -1,33 +1,38 @@
-p#notice = notice
+- content_for :title do
+  = @show.datetime.strftime('%b %e | Fang Chia')
 
-p
-  strong Title:
-  = @show.title
-p
-  strong Slug:
-  = @show.slug
-p
-  strong Description:
-  = @show.description
-p
-  strong Datetime:
-  = @show.datetime
-p
-  strong Venue name:
-  = @show.venue_name
-p
-  strong Venue url:
-  = @show.venue_url
-p
-  strong Venue address:
-  = @show.venue_address
-p
-  strong Cover:
-  = @show.cover
-p
-  strong Cover note:
-  = @show.cover_note
 
-= link_to 'Edit', edit_show_path(@show)
-'  |
-= link_to 'Back', shows_path
+article itemscope=true itemtype="http://schema.org/MusicEvent"
+  h1 itemprop="name"
+    = @show.datetime.strftime('%B %e')
+    span = "at #{@show.venue_name}"
+
+  .venue-details itemprop="location" itemtype="http://schema.org/Place" itemscope=true
+    meta itemprop="name" content="#{@show.venue_name}"
+    link itemprop="sameAs" href="#{@show.venue_url}"
+    meta itemprop="address" content="#{@show.venue_address}"
+
+  .details
+    p
+      time itemprop="startDate" content="#{@show.datetime.strftime('%H:%M')}"
+        = @show.datetime.strftime('%l:%M')
+
+    p = @show.cover
+    p = @show.cover_note
+
+  .description = @show.description.html_safe()
+
+  address = @show.venue_address
+
+  .map-wrapper.loading
+    #map.map data-lat="47.6023262" data-lng="-122.1374963"
+
+  script src="https://maps.googleapis.com/maps/api/js?v=3.24&key=AIzaSyDrtNZJlqTcv7PCLHypLejKW5YLkqxPcAU"
+
+  script src="/js/map.min.js"
+
+  #marker-info-wrapper style="display:none"
+    aside.map-marker-info
+      h1 = @show.venue_name
+      p = @show.venue_address
+
