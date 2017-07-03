@@ -8,6 +8,8 @@ class ShowDecorator
   end
 
   def display_cover()
+    return cover_note unless cover_note.empty?
+
     # display whole-dollar prices without decimals
     format = (cover.round == cover) ? '$%d' : '$%.2f'
     sprintf(format, cover)
