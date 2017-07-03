@@ -10,3 +10,4 @@ admin.role = 'admin'
 admin.save!
 
 puts "GENERATED ADMIN LOGIN: #{admin.email} / #{pw}"
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
