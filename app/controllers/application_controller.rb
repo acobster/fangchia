@@ -11,4 +11,9 @@ class ApplicationController < ActionController::Base
     # otherwise use the normal app layout
     params[:ajax].present? ? false : 'application'
   end
+
+  # Load environment variables
+  def load_env
+    Dotenv.load('.env')
+  end
 end

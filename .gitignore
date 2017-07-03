@@ -17,4 +17,8 @@
 /log/*
 /tmp/*
 
+# Dotenv
+*.env
+.env
+
 .byebug_history

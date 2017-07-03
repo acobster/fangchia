@@ -10,6 +10,7 @@ gem 'rails_admin', '~> 1.2'
 gem 'listen', '~> 3.1'
 gem 'cancancan', '~> 1.10'
 gem 'devise', '~> 4.3'
+gem 'geocoder', '~> 1.4'
 
 group :development, :test do
   gem 'byebug', '~> 9.0'
