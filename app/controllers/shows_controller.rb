@@ -8,7 +8,7 @@ class ShowsController < ApplicationController
 
   # GET /shows/some-show
   def show
-    @show = Show.find_by_slug(params[:slug])
+    @show = ShowDecorator.new(Show.find_by_slug(params[:slug]))
     @api_key = ENV['GOOGLE_MAPS_API_KEY']
   end
 end
