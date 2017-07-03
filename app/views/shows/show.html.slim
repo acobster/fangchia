@@ -17,8 +17,7 @@ article itemscope=true itemtype="http://schema.org/MusicEvent"
       time itemprop="startDate" content="#{@show.datetime.strftime('%H:%M')}"
         = @show.datetime.strftime('%l:%M')
 
-    p = @show.display_cover
-    p = @show.cover_note
+    p = @show.display_cover()
 
   .description = @show.description.html_safe()
 
