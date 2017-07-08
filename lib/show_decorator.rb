@@ -2,6 +2,8 @@ require 'active_support'
 require 'active_support/core_ext/object'
 
 class ShowDecorator
+  attr_reader :show
+
   def initialize(show)
     @show = show
   end
