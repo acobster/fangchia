@@ -1,10 +1,10 @@
 - content_for :title do
-  = @show.datetime.strftime('%b %e | Fang Chia')
+  = @show.html_title()
 
 
 article itemscope=true itemtype="http://schema.org/MusicEvent"
   h1 itemprop="name"
-    = @show.datetime.strftime('%B %e')
+    = @show.display_date()
     span = "at #{@show.venue_name}"
 
   .venue-details itemprop="location" itemtype="http://schema.org/Place" itemscope=true
@@ -14,8 +14,8 @@ article itemscope=true itemtype="http://schema.org/MusicEvent"
 
   .details
     p
-      time itemprop="startDate" content="#{@show.datetime.strftime('%H:%M')}"
-        = @show.datetime.strftime('%l:%M')
+      time itemprop="startDate" content="#{@show.display_machine_time()}"
+        = @show.display_time()
 
     p = @show.display_cover()
 
