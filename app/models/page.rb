@@ -6,4 +6,8 @@ class Page < ApplicationRecord
   def self.home
     find_by_slug 'home'
   end
+
+  def home?
+    slug == 'home'
+  end
 end
