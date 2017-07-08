@@ -28,4 +28,17 @@ ActiveAdmin.register Show do
     end
   end
 
+  index do
+    column :title do |show|
+      link_to show.title, edit_admin_show_path(show)
+    end
+    column :datetime do |show|
+      ShowDecorator.new(show).display_datetime()
+    end
+    column :venue_name
+    column :cover
+    column :cover_note
+    actions
+  end
+
 end
