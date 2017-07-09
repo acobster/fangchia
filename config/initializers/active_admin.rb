@@ -6,6 +6,30 @@ ActiveAdmin.setup do |config|
   #
   config.site_title = "Fangchia"
 
+  # Disable index page filters
+  config.filters = false
+
+  # == Register Stylesheets & Javascripts
+  #
+  # We recommend using the built in Active Admin layout and loading
+  # up your own stylesheets / javascripts to customize the look
+  # and feel.
+  #
+  # To load a stylesheet:
+  #   config.register_stylesheet 'my_stylesheet.css'
+  #
+  # You can provide an options hash for more control, which is passed along to stylesheet_link_tag():
+  #   config.register_stylesheet 'my_print_stylesheet.css', media: :print
+  #
+  # To load a javascript file:
+  #   config.register_javascript '//admin/my_javascript.js'
+
+
+  # TODO
+  # == Setting a Favicon
+  #
+  # config.favicon = 'favicon.ico'
+
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #
@@ -155,10 +179,6 @@ ActiveAdmin.setup do |config|
   #
   config.localize_format = :long
 
-  # == Setting a Favicon
-  #
-  # config.favicon = 'favicon.ico'
-
   # == Meta Tags
   #
   # Add additional meta tags to the head element of active admin pages.
@@ -185,21 +205,6 @@ ActiveAdmin.setup do |config|
   # resources or you can enable them globally from here.
   #
   # config.create_another = true
-
-  # == Register Stylesheets & Javascripts
-  #
-  # We recommend using the built in Active Admin layout and loading
-  # up your own stylesheets / javascripts to customize the look
-  # and feel.
-  #
-  # To load a stylesheet:
-  #   config.register_stylesheet 'my_stylesheet.css'
-  #
-  # You can provide an options hash for more control, which is passed along to stylesheet_link_tag():
-  #   config.register_stylesheet 'my_print_stylesheet.css', media: :print
-  #
-  # To load a javascript file:
-  #   config.register_javascript 'my_javascript.js'
 
   # == CSV options
   #
