@@ -30,5 +30,8 @@ module Fangchia
 
     # autoload libs
     config.autoload_paths += %W(#{config.root}/lib)
+
+    # assets paths
+    config.assets.paths << Rails.root.join('node_modules')
   end
 end
