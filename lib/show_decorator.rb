@@ -1,5 +1,6 @@
 require 'active_support'
 require 'active_support/core_ext/object'
+require 'rdiscount'
 
 class ShowDecorator
   attr_reader :show
@@ -39,5 +40,10 @@ class ShowDecorator
 
   def html_title()
     datetime.strftime('%b %e')+' @ '+venue_name+' | Fang Chia'
+  end
+
+  def description()
+    markdown = RDiscount.new(@show.description)
+    markdown.to_html().html_safe()
   end
 end

@@ -64,4 +64,11 @@ RSpec.describe ShowDecorator do
       end
     end
   end
+
+  context 'description' do
+    it 'compiles the markdown' do
+      decorator = ShowDecorator.new(instance_double('Show', description: "## H2 Title\n\nparagraph"))
+      expect(decorator.description).to eq("<h2>H2 Title</h2>\n\n<p>paragraph</p>\n")
+    end
+  end
 end
