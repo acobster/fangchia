@@ -15,3 +15,19 @@
 // For example, to change the default status-tag color:
 //
 //   .status_tag { background: #6090DB; }
+
+.markdown-guide {
+  margin: 1em;
+  padding: 1em;
+  background: white;
+
+  p { margin: 1em auto; }
+}
+
+.markdown-preview {
+  margin: 2em auto;
+  padding: 1em;
+  max-width: 50em;
+  border: 3px dotted grey;
+  background: white;
+}

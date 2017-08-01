@@ -19,7 +19,7 @@ article itemscope=true itemtype="http://schema.org/MusicEvent"
 
     p = @show.display_cover()
 
-  .description = @show.description.html_safe()
+  .description = @show.description()
 
   address = @show.venue_address
 
