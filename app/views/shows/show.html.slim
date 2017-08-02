@@ -24,7 +24,7 @@ article itemscope=true itemtype="http://schema.org/MusicEvent"
   address = @show.venue_address
 
   .map-wrapper.loading
-    #map.map data-lat="47.6023262" data-lng="-122.1374963"
+    #map.map data-lat="#{@show.lat}" data-lng="#{@show.lng}"
 
   script src="https://maps.googleapis.com/maps/api/js?v=3.24&key=#{@api_key}"
 
