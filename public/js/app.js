@@ -187,13 +187,13 @@ window.addEventListener( 'load', function() {
     }
   });
 
-  // bounce the player button on first visit
-  // TODO bouncing looks dumb, make it shimmer instead
+  // draw the user's eye to the player on first visit
   if (!window.localStorage.repeatVisit) {
     var btnWrapper = document.getElementById('open-player-btn-wrapper');
 
-    // bouncy-bounce
-    btnWrapper.classList.add('bouncy');
+    // get the user's attention somehow
+    btnWrapper.classList.add('eye-catching');
+    // persist the fact that the user saw it
     window.localStorage.repeatVisit = true;
   }
 
