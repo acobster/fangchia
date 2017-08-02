@@ -685,6 +685,12 @@ lru-cache@2:
   version "2.7.3"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-2.7.3.tgz#6d4524e8b955f95d4f5b58851ce21dd72fb4e952"
 
+markdown@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/markdown/-/markdown-0.5.0.tgz#28205b565a8ae7592de207463d6637dc182722b2"
+  dependencies:
+    nopt "~2.1.1"
+
 maxmin@^0.2.0:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/maxmin/-/maxmin-0.2.2.tgz#a36ced8cc22e3abcd108cfb797a3a4b40275593f"
@@ -748,6 +754,12 @@ nopt@~1.0.10:
 nopt@~2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/nopt/-/nopt-2.0.0.tgz#ca7416f20a5e3f9c3b86180f96295fa3d0b52e0d"
+  dependencies:
+    abbrev "1"
+
+nopt@~2.1.1:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/nopt/-/nopt-2.1.2.tgz#6cccd977b80132a07731d6e8ce58c2c8303cf9af"
   dependencies:
     abbrev "1"
 
