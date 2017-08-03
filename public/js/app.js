@@ -197,5 +197,11 @@ window.addEventListener( 'load', function() {
     window.localStorage.repeatVisit = true;
   }
 
+  // toggle footer animation on click
+  document.querySelector('.site-footer').addEventListener('click', function(e) {
+    e.target.classList.toggle('paused');
+    document.querySelector('.open-player-btn').classList.toggle('paused');
+  });
+
 });
 })();

@@ -211,8 +211,10 @@
 
 .drift-right {
   .animation(drift 10s linear infinite);
+  &.paused { .animation(drift 0s linear); }
 }
 
 .drift-left {
   .animation(drift 10s linear infinite reverse);
+  &.paused { .animation(drift 0s linear); }
 }
