@@ -24,16 +24,9 @@ html
 
       nav
         ul
-          li
-            a.nav-link href="/" Home
-          li
-            a.nav-link href="/music" Music
-          li
-            a.nav-link href="/shows" Shows
-          li
-            a.nav-link href="/photos" Photos
-          li
-            a.nav-link href="/about" About
+          - @menu_items.each do |item|
+            li
+              a.nav-link href="#{item.url}" #{item.title}
 
 
     main#main
