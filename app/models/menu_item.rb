@@ -8,4 +8,6 @@ class MenuItem < ApplicationRecord
   validates_uniqueness_of :sort_order
 
   default_scope { order(:sort_order) }
+
+  acts_as_list column: :sort_order
 end
