@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   layout :get_layout
-  before_action :init_menu
+  before_action :init_nav
 
 
   private
@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
     Dotenv.load('.env')
   end
 
-  def init_menu
-    @menu_items = MenuItem.all
+  def init_nav
+    @nav_items = MenuItem.all
   end
 end
