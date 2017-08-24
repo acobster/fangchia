@@ -12,6 +12,8 @@ gem 'cancancan', '~> 1.10'
 gem 'devise', '~> 4.3'
 gem 'geocoder', '~> 1.4'
 gem 'rdiscount', '~> 2.2'
+gem 'acts_as_list', '~> 0.9'
+gem 'activeadmin_sortable_table', '~> 1.2'
 
 group :development, :test do
   gem 'byebug', '~> 9.0'
